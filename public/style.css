@@ -1,0 +1,52 @@
+/* Custom styles for responsive design */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Ensure footer stays at bottom of the page */
+footer {
+  margin-top: auto;
+}
+
+/* Smooth transitions */
+.card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+/* Custom spacing for mobile */
+@media (max-width: 576px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Center login form on mobile */
+  .container .row.justify-content-center {
+    min-height: calc(100vh - 200px);
+    align-items: center;
+  }
+  
+  .container .card.mx-auto {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
